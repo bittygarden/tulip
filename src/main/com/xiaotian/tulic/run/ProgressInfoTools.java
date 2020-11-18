@@ -3,7 +3,7 @@ package com.xiaotian.tulic.run;
 import java.util.Objects;
 
 /**
- * 进度信息工具类
+ * 进度计算工具类
  *
  * @author sunfeilong
  */
