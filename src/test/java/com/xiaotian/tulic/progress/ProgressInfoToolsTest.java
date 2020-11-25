@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.run;
+package com.xiaotian.tulic.progress;
 
 import org.junit.Assert;
 import org.junit.Test;

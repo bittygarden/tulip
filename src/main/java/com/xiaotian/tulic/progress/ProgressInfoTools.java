@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.run;
+package com.xiaotian.tulic.progress;
 
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public class ProgressInfoTools {
             percent = hasFinishedWork * 1.0 * 100 / totalWork;
         }
         if (Objects.isNull(suffix)) {
-            return String.format("%.2f", percent);
+            return String.format("%.8f", percent);
         } else {
             return String.format("%.2f%s", percent, suffix);
         }
