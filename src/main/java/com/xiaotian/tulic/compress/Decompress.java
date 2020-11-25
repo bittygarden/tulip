@@ -1,7 +1,5 @@
 package com.xiaotian.tulic.compress;
 
-import java.io.IOException;
-
 /**
  * 数据解压接口
  *
@@ -15,5 +13,5 @@ public interface Decompress {
      * @param data 压缩后的数据
      * @return 解压结果
      */
-    CompressData decompress(CompressData data) throws IOException;
+    CompressData decompress(CompressData data);
 }
