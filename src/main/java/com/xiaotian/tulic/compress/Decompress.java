@@ -14,6 +14,7 @@ public interface Decompress {
      *
      * @param data 压缩后的数据
      * @return 解压结果
+     * @throws IOException 当解压出错时抛出
      */
     CompressData decompress(CompressData data) throws IOException;
 }
