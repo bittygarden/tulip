@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 
 /**
- * LZ4 压缩 注重压缩和解压速度，压缩率可能不高
+ * LZ4 压缩 注重压缩和解压速度
  *
  * @author sunfeilong [2020/11/25 12:00]
  */
