@@ -1,17 +1,18 @@
-package com.xiaotian.tulic.compress.lz4;
+package com.xiaotian.tulic.compress.snappy;
 
 import com.xiaotian.tulic.compress.CompressData;
 import com.xiaotian.tulic.generator.ByteGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class LZ4Test {
+import java.io.IOException;
 
-    private final LZ4 lz4 = new LZ4();
+public class SnappyTest {
 
+    private final Snappy snappy = new Snappy();
 
     @Test
-    public void compress() {
+    public void compress() throws IOException {
         test(0);
         test(1);
         test(10);
@@ -23,10 +24,10 @@ public class LZ4Test {
         test(10000000);
     }
 
-    private void test(int length) {
+    private void test(int length) throws IOException {
         CompressData data = CompressData.from(generateData(length));
-        CompressData compressData = lz4.compress(data);
-        CompressData decompress = lz4.decompress(compressData);
+        CompressData compressData = snappy.compress(data);
+        CompressData decompress = snappy.decompress(compressData);
         System.out.println(data.length());
         System.out.println(compressData.length());
         System.out.println();

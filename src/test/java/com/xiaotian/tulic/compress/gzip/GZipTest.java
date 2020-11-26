@@ -1,7 +1,7 @@
-package com.xiaotian.tulic.compress.lz4;
+package com.xiaotian.tulic.compress.gzip;
 
 import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.compress.gzip.GZip;
+import com.xiaotian.tulic.generator.ByteGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,10 +38,6 @@ public class GZipTest {
     }
 
     private byte[] generateData(int length) {
-        byte[] bytes = new byte[length];
-        for (int i = 0; i < bytes.length; i++) {
-            bytes[i] = 'a';
-        }
-        return bytes;
+        return ByteGenerator.bytes(length);
     }
 }
