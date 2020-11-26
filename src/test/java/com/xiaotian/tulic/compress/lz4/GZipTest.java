@@ -14,7 +14,7 @@ public class GZipTest {
 
     @Test
     public void compress() throws IOException {
-//        test(0);
+        test(0);
         test(1);
         test(10);
         test(100);
@@ -24,7 +24,7 @@ public class GZipTest {
         test(1000000);
         test(10000000);
     }
-       
+
 
     private void test(int length) throws IOException {
         CompressData data = CompressData.from(generateData(length));

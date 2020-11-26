@@ -25,11 +25,12 @@ public class GZip implements Compress, Decompress {
 
     @Override
     public CompressData compress(CompressData data) throws IOException {
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream();
-             GZIPOutputStream outputStream = new GZIPOutputStream(out)
+        try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()
         ) {
-            outputStream.write(data.data());
-            return CompressData.from(out.toByteArray());
+            GZIPOutputStream gzipOutputStream = new GZIPOutputStream(byteArrayOutputStream);
+            gzipOutputStream.write(data.data());
+            gzipOutputStream.close();
+            return CompressData.from(byteArrayOutputStream.toByteArray());
         }
     }
 
