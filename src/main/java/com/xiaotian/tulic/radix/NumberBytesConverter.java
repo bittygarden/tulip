@@ -1,7 +1,7 @@
 package com.xiaotian.tulic.radix;
 
 /**
- * 数据自己转换
+ * 数据禁进制转换
  *
  * @author sunfeilong [2020/11/25 16:04]
  */
