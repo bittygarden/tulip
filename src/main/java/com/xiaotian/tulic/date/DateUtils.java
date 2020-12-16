@@ -13,7 +13,7 @@ import static java.time.temporal.ChronoField.*;
  *
  * @author sunfeilong [ 2020/12/16 11:53 ]
  */
-public class DateTools {
+public class DateUtils {
 
     /**
      * YYYY-MM-DD HH:MM:SS
