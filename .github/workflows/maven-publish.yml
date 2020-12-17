@@ -1,0 +1,22 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java#apache-maven-with-a-settings-path
+
+name: 打包项目
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Codecov
+        # You may pin to the exact commit or the version.
+        # uses: codecov/codecov-action@239febf655bba88b16ff5dea1d3135ea8663a1f9
+        uses: codecov/codecov-action@v1.0.15
+        with:
+          # User defined upload name. Visible in Codecov UI
+          name: tulip 
+          # Repository upload token - get it from codecov.io. Required only for private repositories
+          token: d1dcd713-454e-4559-b692-a538bd356484
