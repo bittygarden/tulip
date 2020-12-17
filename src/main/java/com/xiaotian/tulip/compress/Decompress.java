@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.compress;
+package com.xiaotian.tulip.compress;
 
 import java.io.IOException;
 

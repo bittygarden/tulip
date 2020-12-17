@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.compress;
+package com.xiaotian.tulip.compress;
 
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;

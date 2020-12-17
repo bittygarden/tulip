@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.progress;
+package com.xiaotian.tulip.progress;
 
 import java.util.Objects;
 

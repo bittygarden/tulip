@@ -1,4 +1,4 @@
-package com.xiaotian.tulic.generator;
+package com.xiaotian.tulip.generator;
 
 /**
  * 字节数据生成器

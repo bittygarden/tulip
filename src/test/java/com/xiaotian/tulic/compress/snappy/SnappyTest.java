@@ -1,7 +1,8 @@
 package com.xiaotian.tulic.compress.snappy;
 
-import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.generator.ByteGenerator;
+import com.xiaotian.tulip.compress.CompressData;
+import com.xiaotian.tulip.compress.snappy.Snappy;
+import com.xiaotian.tulip.generator.ByteGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 

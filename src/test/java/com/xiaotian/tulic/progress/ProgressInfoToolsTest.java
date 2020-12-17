@@ -1,5 +1,6 @@
 package com.xiaotian.tulic.progress;
 
+import com.xiaotian.tulip.progress.ProgressInfoTools;
 import org.junit.Assert;
 import org.junit.Test;
 

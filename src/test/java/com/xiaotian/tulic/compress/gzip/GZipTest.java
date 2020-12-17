@@ -1,7 +1,8 @@
 package com.xiaotian.tulic.compress.gzip;
 
-import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.generator.ByteGenerator;
+import com.xiaotian.tulip.compress.CompressData;
+import com.xiaotian.tulip.compress.gzip.GZip;
+import com.xiaotian.tulip.generator.ByteGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 

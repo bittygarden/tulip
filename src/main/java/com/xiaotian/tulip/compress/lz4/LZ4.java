@@ -1,9 +1,9 @@
-package com.xiaotian.tulic.compress.lz4;
+package com.xiaotian.tulip.compress.lz4;
 
-import com.xiaotian.tulic.compress.Compress;
-import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.compress.Decompress;
-import com.xiaotian.tulic.radix.NumberBytesConverter;
+import com.xiaotian.tulip.compress.Compress;
+import com.xiaotian.tulip.compress.CompressData;
+import com.xiaotian.tulip.compress.Decompress;
+import com.xiaotian.tulip.radix.NumberBytesConverter;
 import net.jpountz.lz4.LZ4Compressor;
 import net.jpountz.lz4.LZ4Factory;
 

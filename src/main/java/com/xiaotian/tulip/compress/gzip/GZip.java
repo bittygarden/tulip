@@ -1,33 +1,35 @@
-package com.xiaotian.tulic.compress.bzip;
+package com.xiaotian.tulip.compress.gzip;
 
-import com.xiaotian.tulic.compress.Compress;
-import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.compress.Decompress;
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream;
+import com.xiaotian.tulip.compress.Compress;
+import com.xiaotian.tulip.compress.CompressData;
+import com.xiaotian.tulip.compress.Decompress;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
+
 
 /**
- * Bzip 注重压缩效率
+ * gzip 较BZip2 压缩效率低，较 bzip压缩速度快。
  *
- * @author sunfeilong [2020/11/26 15:51]
+ * @author sunfeilong [2020/11/25 17:46]
  */
-public class BZip2 implements Compress, Decompress {
+public class GZip implements Compress, Decompress {
 
     private static final int KB = 1024;
 
     private static final int ONE_MB_BYTE = KB << (10 - 3);
 
+
     @Override
     public CompressData compress(CompressData data) throws IOException {
         try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()
         ) {
-            BZip2CompressorOutputStream bZip2CompressorOutputStream = new BZip2CompressorOutputStream(byteArrayOutputStream);
-            bZip2CompressorOutputStream.write(data.data());
-            bZip2CompressorOutputStream.close();
+            GZIPOutputStream gzipOutputStream = new GZIPOutputStream(byteArrayOutputStream);
+            gzipOutputStream.write(data.data());
+            gzipOutputStream.close();
             return CompressData.from(byteArrayOutputStream.toByteArray());
         }
     }
@@ -35,15 +37,16 @@ public class BZip2 implements Compress, Decompress {
     @Override
     public CompressData decompress(CompressData data) throws IOException {
         try (ByteArrayInputStream inputStream = new ByteArrayInputStream(data.data(), 0, data.length());
-             BZip2CompressorInputStream bZip2CompressorInputStream = new BZip2CompressorInputStream(inputStream);
+             GZIPInputStream gzipInputStream = new GZIPInputStream(inputStream, ONE_MB_BYTE);
              ByteArrayOutputStream temp = new ByteArrayOutputStream()
         ) {
             int readCount;
             byte[] tempByte = new byte[ONE_MB_BYTE];
-            while ((readCount = bZip2CompressorInputStream.read(tempByte)) > 0) {
+            while ((readCount = gzipInputStream.read(tempByte)) > 0) {
                 temp.write(tempByte, 0, readCount);
             }
             return CompressData.from(temp.toByteArray());
         }
     }
+
 }

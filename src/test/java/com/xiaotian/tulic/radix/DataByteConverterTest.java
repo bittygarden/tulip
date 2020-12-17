@@ -1,6 +1,7 @@
 package com.xiaotian.tulic.radix;
 
-import com.xiaotian.tulic.progress.ProgressInfoTools;
+import com.xiaotian.tulip.progress.ProgressInfoTools;
+import com.xiaotian.tulip.radix.NumberBytesConverter;
 import org.junit.Assert;
 import org.junit.Test;
 

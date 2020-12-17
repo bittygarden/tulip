@@ -1,8 +1,8 @@
-package com.xiaotian.tulic.compress.snappy;
+package com.xiaotian.tulip.compress.snappy;
 
-import com.xiaotian.tulic.compress.Compress;
-import com.xiaotian.tulic.compress.CompressData;
-import com.xiaotian.tulic.compress.Decompress;
+import com.xiaotian.tulip.compress.Compress;
+import com.xiaotian.tulip.compress.CompressData;
+import com.xiaotian.tulip.compress.Decompress;
 
 import java.io.IOException;
 
