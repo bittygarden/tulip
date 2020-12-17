@@ -29,10 +29,6 @@ public class SnappyTest {
         CompressData data = CompressData.from(generateData(length));
         CompressData compressData = snappy.compress(data);
         CompressData decompress = snappy.decompress(compressData);
-        System.out.println(data.length());
-        System.out.println(compressData.length());
-        System.out.println();
-        System.out.println();
         Assert.assertEquals("压缩或解压缩出错", data.string(), decompress.string());
     }
 

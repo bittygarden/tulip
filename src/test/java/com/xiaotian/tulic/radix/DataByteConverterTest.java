@@ -22,7 +22,6 @@ public class DataByteConverterTest {
             byte[] intToByte = NumberBytesConverter.intToByte(((int) min));
             int byteToInt = NumberBytesConverter.byteToInt(intToByte);
             Assert.assertEquals(min, byteToInt);
-            System.out.println(ProgressInfoTools.format(max - Integer.MIN_VALUE, min - Integer.MIN_VALUE));
             if (min == max) {
                 break;
             }

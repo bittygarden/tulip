@@ -19,7 +19,7 @@ public class ProgressInfoTools {
             percent = hasFinishedWork * 1.0 * 100 / totalWork;
         }
         if (Objects.isNull(suffix)) {
-            return String.format("%.8f", percent);
+            return String.format("%.2f", percent);
         } else {
             return String.format("%.2f%s", percent, suffix);
         }
