@@ -1,5 +1,7 @@
 package com.xiaotian.tulip.date;
 
+import com.xiaotian.tulip.asserts.Asserts;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -41,14 +43,17 @@ public class DateUtils {
     }
 
     public static String dateUnderlineBlankTimeColon(LocalDateTime dateTime) {
+        Asserts.assertNotNull(dateTime, "param dateTime must not null");
         return DateUnderlineBlankTimeColon.format(dateTime);
     }
 
-    public static String dateUnderlineBlankTimeColon(LocalDate dateTime) {
-        return DateUnderlineBlankTimeColon.format(dateTime).trim();
+    public static String dateUnderlineBlankTimeColon(LocalDate date) {
+        Asserts.assertNotNull(date, "param date must not null");
+        return DateUnderlineBlankTimeColon.format(date).trim();
     }
 
-    public static String dateUnderlineBlankTimeColon(LocalTime dateTime) {
-        return DateUnderlineBlankTimeColon.format(dateTime);
+    public static String dateUnderlineBlankTimeColon(LocalTime time) {
+        Asserts.assertNotNull(time, "param time must not null");
+        return DateUnderlineBlankTimeColon.format(time);
     }
 }
